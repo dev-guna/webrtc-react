@@ -8,7 +8,7 @@ const UserAComponent = () => {
   const peerConnection = useRef(new RTCPeerConnection());
 
   useEffect(() => {
-    socket.current = io('http://webrtc-backend-tbmd.onrender.com',{ transports: ['websocket']}); // replace with your server URL
+    socket.current = io('https://webrtc-backend-tbmd.onrender.com',{ transports: ['websocket']}); // replace with your server URL
 
     navigator.mediaDevices.getUserMedia({ video: true, audio: true })
       .then((stream) => {

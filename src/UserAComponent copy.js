@@ -8,7 +8,7 @@ const UserAComponent2 = () => {
   let peerConnection;
 
   useEffect(() => {
-    socket.current = io('http://webrtc-backend-tbmd.onrender.com',{ transports: ['websocket']}); // replace with your server URL
+    socket.current = io('https://webrtc-backend-tbmd.onrender.com',{ transports: ['websocket']}); // replace with your server URL
 
     navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(function (stream) {
@@ -34,7 +34,7 @@ const UserAComponent2 = () => {
   
       // Send stream to server (pseudo-code)
       // Example: using WebSocket to transmit data
-      //const ws = io('http://webrtc-backend-tbmd.onrender.com',{ transports: ['websocket']});
+      //const ws = io('https://webrtc-backend-tbmd.onrender.com',{ transports: ['websocket']});
       peerConnection.createOffer()
         .then(function (offer) {
           return peerConnection.setLocalDescription(offer);
