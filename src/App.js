@@ -1,8 +1,10 @@
 import React from 'react';
-import VideoChat from './videoChat';
+//import VideoChat from './videoChat';
+//import UserAComponent from './UserAComponent';
+import UserAComponent2 from './UserAComponent copy';
 
 const App = () => {
-  const roomId = 'your-room-id';
+  //const roomId = 'your-room-id';
   // const [socket, setSocket] = useState(null);
   // const remoteVideoRef = useRef(null);
 
@@ -68,7 +70,8 @@ const App = () => {
       {/* <h1>Admin Dashboard</h1>
       <video ref={remoteVideoRef} autoPlay playsInline></video> */}
       <h1>WebRTC Multi Peer Connection</h1>
-      <VideoChat roomId={roomId} />
+      {/* <VideoChat roomId={roomId} /> */}
+      <UserAComponent2 />
     </div>
   );
 };
